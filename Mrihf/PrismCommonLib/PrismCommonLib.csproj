@@ -242,8 +242,6 @@
     <Compile Include="MefExtensions\Regions\MefRegionViewRegistry.cs" />
     <Compile Include="MefExtensions\Regions\MefSelectorRegionAdapter.cs" />
     <Compile Include="Mvvm\Commands\CompositeCommand.cs" />
-    <Compile Include="Mvvm\Commands\DelegateCommand.cs" />
-    <Compile Include="Mvvm\Commands\DelegateCommandBase.cs" />
     <Compile Include="Mvvm\Commands\WeakEventHandlerManager.cs" />
     <Compile Include="Mvvm\ErrorsContainer.cs" />
     <Compile Include="Mvvm\IView.cs" />

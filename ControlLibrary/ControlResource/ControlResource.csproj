@@ -58,18 +58,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControls\MessageBoxControl\MessageBoxButton.cs" />
-    <Compile Include="CustomControls\MessageBoxControl\MessageBoxEventArgs.cs" />
-    <Compile Include="CustomControls\MessageBoxControl\MessageBoxShow.cs" />
-    <Compile Include="CustomControls\MessageBoxControl\MessageBoxView.xaml.cs">
-      <DependentUpon>MessageBoxView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\MessageBoxControl\MessageBoxViewModel.cs" />
-    <Compile Include="CustomControls\MessageBoxControl\MessageBoxWindow.xaml.cs">
-      <DependentUpon>MessageBoxWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControls\MessageBoxControl\MessageWindow.cs" />
-    <Compile Include="CustomControls\MessageBoxControl\VisibilityConverter.cs" />
     <Compile Include="CustomControls\CircleProgressRingControl\ModernProgressRing.cs" />
     <Compile Include="CustomControls\RadioButtonControl\UserControlRadioBtn.xaml.cs">
       <DependentUpon>UserControlRadioBtn.xaml</DependentUpon>
@@ -174,18 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="CommonStyle\Styles\MenuItem.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="CustomControls\MessageBoxControl\MessageBoxPath.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="CustomControls\MessageBoxControl\MessageBoxView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="CustomControls\MessageBoxControl\MessageBoxWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

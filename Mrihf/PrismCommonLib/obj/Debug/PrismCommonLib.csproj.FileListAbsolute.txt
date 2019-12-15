@@ -1,0 +1,12 @@
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\PrismCommonLib.csprojAssemblyReference.cache
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\Interactivity\DefaultPopupWindows\DefaultConfirmationWindow.baml
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\Interactivity\DefaultPopupWindows\DefaultNotificationWindow.baml
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\Interactivity\DefaultPopupWindows\DefaultConfirmationWindow.g.cs
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\Interactivity\DefaultPopupWindows\DefaultNotificationWindow.g.cs
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\PrismCommonLib_MarkupCompile.cache
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\PrismCommonLib.g.resources
+E:\Mrihf\Output\PrismCommonLib.dll
+E:\Mrihf\Output\PrismCommonLib.pdb
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\PrismCommonLib.csproj.CopyComplete
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\PrismCommonLib.dll
+E:\Mrihf\Mrihf\PrismCommonLib\obj\Debug\PrismCommonLib.pdb

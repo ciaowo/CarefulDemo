@@ -45,6 +45,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity">
       <HintPath>..\..\Libs\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -67,6 +68,9 @@
     <Compile Include="Base\ViewModelBaseEx.cs" />
     <Compile Include="Base\ViewModelBaseSub.cs" />
     <Compile Include="Behaviors\OpenWindowAction.cs" />
+    <Compile Include="Command\DelegateCommand.cs" />
+    <Compile Include="Command\DelegateCommandBase.cs" />
+    <Compile Include="Command\WeakEventHandlerManager.cs" />
     <Compile Include="Converters\BoolAsVisiableConverter.cs" />
     <Compile Include="Converters\StringAsBoolConverter.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
@@ -79,6 +83,7 @@
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\VisualTreeHelperEx.cs" />
     <Compile Include="Helpers\DesignerPlatformLibrary.cs" />
     <Compile Include="Helpers\Empty.cs" />
     <Compile Include="Helpers\FeatureDetection.cs" />
@@ -89,8 +94,7 @@
     <Compile Include="Helpers\WeakFunc.cs" />
     <Compile Include="Helpers\WeakFuncGeneric.cs" />
     <Compile Include="ICleanup.cs" />
-    <Compile Include="Logs\FileLogger.cs" />
-    <Compile Include="Logs\ILogExtensions.cs" />
+    <Compile Include="IViewModelParameter.cs" />
     <Compile Include="Messaging\DialogMessage.cs" />
     <Compile Include="Messaging\GenericMessage.cs" />
     <Compile Include="Messaging\IMessenger.cs" />
@@ -111,13 +115,34 @@
     <Compile Include="ObservableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proxy\BindingProxy.cs" />
+    <Compile Include="Services\ApplicationHelper.cs" />
+    <Compile Include="Services\ContainerService.cs" />
+    <Compile Include="Services\FrameWindowService.cs" />
+    <Compile Include="Services\IFrameWindowService.cs" />
     <Compile Include="Utility\ApplicationHelper.cs" />
     <Compile Include="Utility\DispatcherHelper.cs" />
     <Compile Include="Utility\RpcInvoker.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="Views\DialogService.cs" />
+    <Compile Include="Views\FrameWindow.xaml.cs">
+      <DependentUpon>FrameWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IDialogService.cs" />
     <Compile Include="Views\INavigationService.cs" />
+    <Compile Include="Views\MessageBoxControl\MessageBoxButton.cs" />
+    <Compile Include="Views\MessageBoxControl\MessageBoxEventArgs.cs" />
+    <Compile Include="Views\MessageBoxControl\MessageBoxShow.cs" />
+    <Compile Include="Views\MessageBoxControl\MessageBoxView.xaml.cs">
+      <DependentUpon>MessageBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxControl\MessageBoxViewModel.cs" />
+    <Compile Include="Views\MessageBoxControl\MessageBoxWindow.xaml.cs">
+      <DependentUpon>MessageBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxControl\MessageWindow.cs" />
+    <Compile Include="Views\MessageBoxControl\VisibilityConverter.cs" />
+    <Compile Include="Views\WindowBaseControl\BaseWindow.cs" />
+    <Compile Include="Views\WindowContainerControl\WindowContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonLib\CommonLib.csproj">
@@ -126,5 +151,35 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Page Include="Views\FrameWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessageBoxControl\MessageBoxPath.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessageBoxControl\MessageBoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessageBoxControl\MessageBoxWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WindowBaseControl\BaseWindowStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WindowContainerControl\WindowContainer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
